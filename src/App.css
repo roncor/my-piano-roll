@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-image: url('images/Hello.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+button{
+font-family: Roboto, sans-serif;
+font-weight: 0;
+font-size: 14px;
+color: #000000;
+background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
+padding: 10px 29px;
+border: solid #0066cc 3px;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 50px;
+transition : 2525ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+
+}
+
+button:hover{
+transition : 2525ms;
+padding: 10px 50px;
+transform : translateY(-0px);
+background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
+color: #0066cc;
+border: solid 3px #0066cc;
+
+}
+
+
