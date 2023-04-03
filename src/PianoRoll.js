@@ -84,8 +84,14 @@ const PianoRoll = ({ midiData }) => {
   return (
     <div>
       <h2>Piano Roll</h2>
-      <button onClick={handlePlayClick} disabled={isPlaying}>Play</button>
-      <button onClick={handleStopClick} disabled={!isPlaying}>Stop</button>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <button onClick={handlePlayClick} disabled={isPlaying} style={{ marginRight: '10px' }}>
+          Play
+        </button>
+        <button onClick={handleStopClick} disabled={!isPlaying} style={{ marginLeft: '10px' }}>
+          Stop
+        </button>
+      </div>
       <Piano
         ref={pianoRef}
         noteRange={{ first: firstNote, last: lastNote }}
@@ -95,11 +101,7 @@ const PianoRoll = ({ midiData }) => {
         keyboardShortcuts={keyboardShortcuts}
         activeNotes={activeNotes}
         renderNoteLabel={(midiNumber, isActive, isAccidental) => (
-          <NoteLabel
-            midiNumber={midiNumber}
-            isActive={isActive}
-            isAccidental={isAccidental}
-          />
+          <NoteLabel midiNumber={midiNumber} isActive={isActive} isAccidental={isAccidental} />
         )}
       />
     </div>

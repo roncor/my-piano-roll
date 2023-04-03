@@ -1,22 +1,23 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 const MidiInput = ({ onMidiFileLoaded }) => {
-  const inputRef = useRef();
-
-  const handleFileChange = async (e) => {
-    const file = e.target.files[0];
+  const handleFileSelected = async (event) => {
+    const file = event.target.files[0];
     const arrayBuffer = await file.arrayBuffer();
-    onMidiFileLoaded(arrayBuffer);
+    onMidiFileLoaded(arrayBuffer, file.name);
   };
 
   return (
     <div>
-      <input
-        type="file"
-        ref={inputRef}
-        onChange={handleFileChange}
-        accept=".midi, .mid"
-      />
+      <label htmlFor="midi-file-input">
+        Load MIDI File
+        <input
+          type="file"
+          id="midi-file-input"
+          accept=".mid,.midi"
+          onChange={handleFileSelected}
+        />
+      </label>
     </div>
   );
 };

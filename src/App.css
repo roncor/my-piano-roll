@@ -2,19 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-   background-color: #282c34;
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,55 +13,73 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  margin: 0.5em 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #2e7ab9 0%, #993399 100%);
+  padding: 12px 32px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 1em 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
-body {
-  background-image: url('images/Hello.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-
-button{
-font-family: Roboto, sans-serif;
-font-weight: 0;
-font-size: 14px;
-color: #000000;
-background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
-padding: 10px 29px;
-border: solid #0066cc 3px;
-box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
-border-radius: 50px;
-transition : 2525ms;
-transform: translateY(0);
-display: flex;
-flex-direction: row;
-align-items: center;
-cursor: pointer;
-
+button:active {
+  transform: translateY(0);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-button:hover{
-transition : 2525ms;
-padding: 10px 50px;
-transform : translateY(-0px);
-background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
-color: #0066cc;
-border: solid 3px #0066cc;
-
+input[type="file"] {
+  display: none;
 }
 
+label.upload {
+  display: inline-block;
+  background-color: #2e7ab9;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 32px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
 
+label.upload:hover {
+  background-color: #246499;
+}
+
+label.upload:active {
+  background-color: #2e7ab9;
+}
+
+input[type="file"] + label.upload:after {
+  content: "Upload MIDI File";
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+.play {
+  background-color: #0a7d33;
+}
+
+.stop {
+  background-color: #d6330a;
+}
+
+.clean {
+  background-color: #707070;
+}
