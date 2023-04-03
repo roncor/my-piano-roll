@@ -22,6 +22,5 @@ After uploading the file you have 3 buttons
 2) Play to reproduce the midi file
 3) Stop to stop reproducing the file
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You will find an midi example in the scr folder
 
